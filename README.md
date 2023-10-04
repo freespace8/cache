@@ -18,7 +18,7 @@ rc := cache.NewCache(rdb,
 )
 
 rc.Fetch("key", 30*time.Second, func() (string, error) {
-  time.Sleep(1 * time.Second)
-  return value, nil
+  time.Sleep(1*time.Second)
+  return "value", nil
 })
 ```
